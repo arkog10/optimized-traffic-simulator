@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optimized-traffic-simulator"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "torch>=2.2",
+  "gymnasium>=1.0",
+  "pygame>=2.5",
+  "matplotlib>=3.8",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["trafficsim*", "agents*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

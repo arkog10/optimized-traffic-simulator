@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-07-01",
+  "grid_size": 1,
+  "seeds": 10,
+  "episode_steps": 1000,
+  "baseline": {
+    "controller": "fixed_timer",
+    "period_steps": 20,
+    "avg_stopped": {
+      "mean": 5.0504999999999995,
+      "std": 0.19039445895298526,
+      "min": 4.845,
+      "max": 5.473
+    },
+    "throughput": {
+      "mean": 511.0,
+      "std": 0.0,
+      "min": 511.0,
+      "max": 511.0
+    },
+    "total_wait": {
+      "mean": 5050.5,
+      "std": 190.3944589529853,
+      "min": 4845.0,
+      "max": 5473.0
+    },
+    "wait_per_car": {
+      "mean": 9.883561643835616,
+      "std": 0.3725918961897949,
+      "min": 9.481409001956948,
+      "max": 10.71037181996086
+    },
+    "max_stopped": {
+      "mean": 26.9,
+      "std": 2.3,
+      "min": 23.0,
+      "max": 30.0
+    },
+    "phase_switches": {
+      "mean": 49.0,
+      "std": 0.0,
+      "min": 49.0,
+      "max": 49.0
+    },
+    "congestion_steps": {
+      "mean": 353.1,
+      "std": 11.299999999999999,
+      "min": 338.0,
+      "max": 369.0
+    }
+  },
+  "dqn": {
+    "controller": "trained_dqn",
+    "checkpoint": "checkpoints/dqn_final.pt",
+    "avg_stopped": {
+      "mean": 3.7784,
+      "std": 0.26716856102468345,
+      "min": 3.428,
+      "max": 4.271
+    },
+    "throughput": {
+      "mean": 511.0,
+      "std": 0.0,
+      "min": 511.0,
+      "max": 511.0
+    },
+    "total_wait": {
+      "mean": 3778.4,
+      "std": 267.16856102468347,
+      "min": 3428.0,
+      "max": 4271.0
+    },
+    "wait_per_car": {
+      "mean": 7.394129158512721,
+      "std": 0.5228347573868561,
+      "min": 6.708414872798435,
+      "max": 8.358121330724071
+    },
+    "max_stopped": {
+      "mean": 25.5,
+      "std": 1.6881943016134133,
+      "min": 23.0,
+      "max": 28.0
+    },
+    "phase_switches": {
+      "mean": 35.1,
+      "std": 2.118962010041709,
+      "min": 31.0,
+      "max": 37.0
+    },
+    "congestion_steps": {
+      "mean": 354.4,
+      "std": 14.086873322352266,
+      "min": 334.0,
+      "max": 380.0
+    }
+  },
+  "improvement": {
+    "avg_stopped_reduction_pct": 25.187605187605183,
+    "throughput_reduction_pct": 0.0,
+    "total_wait_reduction_pct": 25.187605187605183,
+    "wait_per_car_reduction_pct": 25.187605187605183,
+    "max_stopped_reduction_pct": 5.204460966542746,
+    "phase_switches_reduction_pct": 28.367346938775505,
+    "congestion_steps_reduction_pct": -0.3681676578872711
+  },
+  "figures": [
+    "comparison_bars.png",
+    "distribution_boxplot.png",
+    "stopped_timeseries.png",
+    "cumulative_wait.png",
+    "improvement_lollipop.png"
+  ]
+}
